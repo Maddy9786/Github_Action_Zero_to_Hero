@@ -1,0 +1,24 @@
+#name of the workflows
+name : Hello
+
+#workflows trigger on PR
+on :
+  push :
+    branches : [main]
+    
+#defination of jobs
+jobs:
+   #defination of job
+   greet :
+      runs-on : ubuntu-latest    # github hosted runner
+
+      #below steps will get perfomed in this jobe 
+      steps:
+        - name : say hello to all
+          run : echo "Hello Dosto"
+
+        - name: say hello to users
+          run : echo "hello $USER"
+          
+      
+     
