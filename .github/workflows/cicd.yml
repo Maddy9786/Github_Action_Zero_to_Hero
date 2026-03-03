@@ -10,6 +10,7 @@ jobs:
            run : echo "Pulled the code from githuub"
         
     build :
+      needs : [code]
       runs-on : ubuntu-latest
       steps:
        - name : building the code
@@ -17,12 +18,14 @@ jobs:
 
 
     test :
+      needs : [build]
       runs-on : ubuntu-latest
       steps:
         - name : testing the build
           run : echo "exec the docker build"     
 
     deploy :
+      needs : [test]
       runs-on : ubuntu-latest
       steps:
         - name : deploying the code
