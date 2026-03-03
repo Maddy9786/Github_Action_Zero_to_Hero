@@ -1,0 +1,29 @@
+name : CICD
+on :
+  workflow_dispatch: 
+
+jobs:
+    code :
+       runs-on : ubuntu-latest
+       steps:
+         - name : pulling the code from github
+           run : echo "Pulled the code from githuub"
+        
+    build :
+      runs-on : ubuntu-latest
+      steps:
+       - name : building the code
+         run : echo "build the code using docker"
+
+
+    test :
+      runs-on : ubuntu-latest
+      steps:
+        - name : testing the build
+          run : echo "exec the docker build"     
+
+    deploy :
+      runs-on : ubuntu-latest
+      steps:
+        - name : deploying the code
+          run : echo "running the code using docker compose"    
