@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoeb Malpara | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -100%;
+            left: -100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transform: rotate(25deg);
+            transition: 0.6s;
+        }
+
+        .card:hover::before {
+            top: 100%;
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: #00f5a0;
+        }
+
+        .card p,
+        .card li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00f5a0;
+            color: #000;
+            box-shadow: 0 0 15px #00f5a0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Shoeb Malpara</h1>
+            <p>Senior Cake Master | 20+ Years of Culinary Excellence</p>
+        </header>
+
+        <section class="grid">
+            <div class="card">
+                <h3>About Me</h3>
+                <p>
+                    Passionate and highly experienced cake master with over two decades of expertise in crafting premium
+                    cakes, pastries, and leading bakery operations with precision and creativity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Experience</h3>
+                <ul>
+                    <li><strong>2015–2024:</strong> Senior Cake Master, Cafe Arabica, Bengaluru</li>
+                    <li><strong>2002–2015:</strong> Chief Chef, Eden Exclusive Cake, Mumbai</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Custom Designer Cakes</li>
+                    <li>Pastry & Bakery Production</li>
+                    <li>Kitchen Management</li>
+                    <li>Quality Control</li>
+                    <li>Team Leadership</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Education</h3>
+                <p>SSC Completed - 2001</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Shoeb Malpara | Crafted with Passion</p>
+            <a href="#" class="btn">Contact Me</a>
+        </footer>
+    </div>
+</body>
+
+</html>
