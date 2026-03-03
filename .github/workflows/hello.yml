@@ -21,4 +21,9 @@ jobs:
           run : echo "hello $USER"
           
       
-     
+   details:
+        runs-on : ubuntu-latest
+        steps:
+          - name : need to verify the version of docker && python
+            run : docker --version && python --version
+      
