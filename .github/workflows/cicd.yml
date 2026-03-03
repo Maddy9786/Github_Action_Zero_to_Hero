@@ -10,7 +10,7 @@ jobs:
            run : echo "Pulled the code from githuub"
         
     build :
-      needs : [code]
+      needs : code
       runs-on : ubuntu-latest
       steps:
        - name : building the code
