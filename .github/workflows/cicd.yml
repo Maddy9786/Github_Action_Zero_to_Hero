@@ -1,6 +1,20 @@
 name : CICD
 on :
   workflow_dispatch: 
+     inputs :   
+       environments: 
+         description: This is the enviroment where the workflows run
+         default: 'dev'
+         required: true
+         type: choice 
+         options:
+            - dev
+            - staging
+            - prod
+         
+            
+         
+  
 
 jobs:
     code :
@@ -25,6 +39,7 @@ jobs:
           run : echo "exec the docker build"     
 
     deploy :
+      if : inputs.environments == 'dev'
       needs : [test]
       runs-on : ubuntu-latest
       steps:
