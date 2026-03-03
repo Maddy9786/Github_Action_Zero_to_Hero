@@ -11,11 +11,6 @@ on :
             - dev
             - staging
             - prod
-         
-            
-         
-  
-
 jobs:
     code :
        runs-on : ubuntu-latest
@@ -39,7 +34,7 @@ jobs:
           run : echo "exec the docker build"     
 
     deploy :
-      if : inputs.environments == 'dev'
+      if : inputs.environments != 'prod'
       needs : [test]
       runs-on : ubuntu-latest
       steps:
