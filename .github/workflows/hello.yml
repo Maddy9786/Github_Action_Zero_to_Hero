@@ -3,8 +3,7 @@ name : Hello
 
 #workflows trigger on PR
 on :
-  push :
-    branches : [main]
+  workflow_dispatch: 
     
 #defination of jobs
 jobs:
