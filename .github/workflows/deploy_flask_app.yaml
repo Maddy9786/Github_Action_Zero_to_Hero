@@ -5,7 +5,7 @@ on:
 jobs:
    deploy:
     env:
-       DOCKER_USER = ${{vars.DOCKER_USENAME}}
+       DOCKER_USERNAME = ${{vars.DOCKER_USENAME}}
     runs-on: self-hosted
     steps: 
 
