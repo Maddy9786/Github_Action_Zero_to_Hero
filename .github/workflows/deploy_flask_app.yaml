@@ -1,0 +1,21 @@
+name : docker compose
+on: 
+  workflow_dispatch
+
+jobs:
+   deploy:
+    env:
+       DOCKER_USER = ${{vars.DOCKER_USENAME}}
+    runs-on: self-self-hosted
+    steps: 
+
+      - name: code checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Compose (optional, usually pre-installed on ubuntu-latest runners)
+        uses: docker/setup-compose-action@v2  
+
+      - name: docker compose up
+        run: docker compose down && docker compose up -d --build --force-recreate --pull always
+
+
