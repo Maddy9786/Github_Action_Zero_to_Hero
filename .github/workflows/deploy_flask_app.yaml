@@ -4,10 +4,10 @@ on:
 
 jobs:
    deploy:
-    env:
-       DOCKER_USERNAME = ${{vars.DOCKER_USENAME}}
-    runs-on: self-hosted
-    steps: 
+      env:
+          DOCKERHUB_USER = ${{vars.DOCKERHUB_USER}}
+      runs-on: self-hosted
+      steps: 
 
       - name: code checkout
         uses: actions/checkout@v4
