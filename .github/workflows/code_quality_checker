@@ -1,16 +1,16 @@
 name : code quality checker
 on:
-  push:
-    branches: [main]
+  workflow_dispatch
+  #workflow_call:
 
 jobs: 
-
-     runs-on: ubuntu-latest
-     strategy:
+    code_quality_check:
+      runs-on: ubuntu-latest
+      strategy:
         fail-fast: False
         matrix:
           python-version:${{"3.11"}}
-     steps: 
+      steps: 
         - name: code checkout
           uses: actions/checkout@v4
 
