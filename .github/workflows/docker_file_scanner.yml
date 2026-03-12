@@ -1,0 +1,21 @@
+name: Docker file scanner
+
+on:
+    workflow_dispatch:
+
+jobs: 
+    Docker_file_scanner:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+      # Step 2: Run Hadolint via official GitHub Action
+            - name: Run Hadolint
+              uses: hadolint/hadolint-action@v3.1.0
+              with:
+               dockerfile: Dockerfile 
+
+
+        
