@@ -9,7 +9,7 @@ jobs:
       strategy:
         fail-fast: False
         matrix:
-          python-version:${{"3.11"}}
+          python-version: [3.11]
       steps: 
         - name: code checkout
           uses: actions/checkout@v4
