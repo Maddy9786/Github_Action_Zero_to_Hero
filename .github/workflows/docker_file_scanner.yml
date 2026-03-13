@@ -1,7 +1,7 @@
 name: Docker file scanner
 
 on:
-    workflow_dispatch:
+    workflow_call:
 
 jobs: 
     Docker_file_scanner:

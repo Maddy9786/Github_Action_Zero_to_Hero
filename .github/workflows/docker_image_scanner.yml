@@ -2,7 +2,7 @@ name: docker image scanner using trivy
 
 on:
 
-    workflow_dispatch:
+    workflow_call:
 
 jobs:
     
