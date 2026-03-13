@@ -24,6 +24,7 @@ jobs:
               uses: aquasecurity/trivy-action@0.35.0
               with:
                 image-ref: ${{vars.DOCKER_USERNAME}}/github-action-flask:V1
+                #image-ref: ${{vars.DOCKER_USERNAME}}/github-action-flask:${{ github.sha}}
                 severity: HIGH,CRITICAL
                 exit-code: 1
                 trivyignores: ${{ github.workspace }}/.trivyignore
