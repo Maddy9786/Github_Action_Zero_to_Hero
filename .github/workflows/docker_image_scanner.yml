@@ -26,4 +26,4 @@ jobs:
                 image-ref: ${{vars.DOCKER_USERNAME}}/github-action-flask:${{ github.sha }}
                 severity: HIGH,CRITICAL
                 exit-code: 1
-                trivyignores: ${{ github.workspace }}/.trivyignore
+                #trivyignores: ${{ github.workspace }}/.trivyignore
