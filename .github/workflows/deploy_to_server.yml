@@ -17,4 +17,6 @@ jobs:
                 host: ${{ secrets.HOST }}
                 username: ${{ secrets.USERNAME }}
                 password: ${{ secrets.PASSWORD }}
-                script: whoami
+                script: |
+                  echo "Successfully logged in"
+                  whoami
