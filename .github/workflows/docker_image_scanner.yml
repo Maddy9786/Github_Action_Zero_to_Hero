@@ -23,7 +23,7 @@ jobs:
             - name: Run Trivy vulnerability scanner
               uses: aquasecurity/trivy-action@0.35.0
               with:
-                image-ref: ${{vars.DOCKER_USERNAME}}/github-action-flask:${{ github.sha }}
+                image-ref: ${{vars.DOCKER_USERNAME}}/github-action-flask:V1
                 severity: HIGH,CRITICAL
                 exit-code: 1
                 #trivyignores: ${{ github.workspace }}/.trivyignore
