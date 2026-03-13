@@ -20,3 +20,4 @@ jobs:
                 script: |
                   echo "Successfully logged in"
                   whoami
+                  mkdir flasp_app_deployment
