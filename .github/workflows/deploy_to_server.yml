@@ -42,8 +42,8 @@ jobs:
                 username: ${{ secrets.EC2_USERNAME }}
                 key: ${{ secrets.EC2_KEY }}
                 script: |
-                  export DOCKER_USER= ${{vars.DOCKER_USERNAME}}
-                  export DOCKER_TAG= ${{github.sha}}
+                  export DOCKER_USER=${{ vars.DOCKER_USERNAME }}
+                  export DOCKER_TAG=${{ github.sha }}
                   echo ${{secrets.DOCKER_TOKEN}} | docker login --username ${{vars.DOCKER_USERNAME}} --password-stdin
                   cd ~/flasp_app_deployment && docker compose down && docker compose up -d --build --force-recreate --pull always
 
