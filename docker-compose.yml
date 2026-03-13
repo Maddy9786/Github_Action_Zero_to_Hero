@@ -1,5 +1,5 @@
 services:
    deploy: 
-     image: ${DOCKER_USERNAME}/github_action_flask-app:${github.sha}
+     image: ${DOCKER_USERNAME}/github_action_flask:${github.sha}
      ports:
        - "80:80"
